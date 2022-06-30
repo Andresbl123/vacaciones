@@ -1,0 +1,34 @@
+.documento {
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 580px;
+}
+
+.retornar {
+  width: 90%;
+  text-align: end;
+  right: 50px;
+}
+.cerrar {
+  border-radius: 100px;
+}
+
+.cerrar2 {
+  padding-top: 10px;
+  text-align: center;
+}
+.cerrar-boton {
+  border-radius: 5px;
+  background-color: rgb(133, 179, 225);
+  width: 100px;
+}
+.ver-pdf {
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  color: darkgray;
+}

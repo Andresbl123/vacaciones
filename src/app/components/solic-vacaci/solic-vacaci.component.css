@@ -1,0 +1,30 @@
+table {
+  margin-top: 2%;
+}
+
+.table_head {
+  background-color: rgb(133, 179, 225);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(90, 137, 218);
+  border-radius: 5px;
+  height: 30px;
+  margin-top: 2%;
+  margin-left: 70%;
+}

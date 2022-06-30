@@ -1,0 +1,39 @@
+.fomrulario {
+  margin: auto;
+  margin-top: 10%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: min-content;
+}
+
+.observaciones {
+  width: 200px;
+  height: 150px;
+  line-height: normal;
+}
+
+textarea {
+  border: 2px solid blue;
+}
+.fecha {
+  border: 0;
+  border-bottom: 2px solid blue;
+  width: fit-content;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.labels {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.enviar-info {
+  padding-top: 20px;
+  text-align: center;
+}
+.solicitar {
+  background-color: rgb(90, 137, 218);
+  border-radius: 5px;
+  width: 90px;
+}

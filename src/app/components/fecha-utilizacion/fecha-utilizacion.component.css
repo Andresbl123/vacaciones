@@ -1,0 +1,36 @@
+.fechas {
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+table {
+  text-align: center;
+  position: relative;
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+.retornar {
+  width: 66%;
+  text-align: end;
+  right: 50px;
+}
+.cerrar {
+  border-radius: 100px;
+}
+
+h3 {
+  color: darkgray;
+}
+
+.container-button {
+  padding-top: 20px;
+  text-align: center;
+}
+.boton {
+  background-color: rgb(133, 179, 225);
+}

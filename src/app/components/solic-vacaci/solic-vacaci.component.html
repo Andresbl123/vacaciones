@@ -1,0 +1,47 @@
+<router-outlet></router-outlet>
+<button type="submit">Solicitud días de disfrute Vaciones</button>
+<div class="container">
+  <div class="container">
+    <table class="Solicitudes-tramite">
+      <thead class="table_head">
+        <tr>
+          <th style="width: 90px">Modelo</th>
+          <th style="width: 140px">Referencias</th>
+          <th>Fecha de Solicitud</th>
+          <th>Etapa</th>
+          <th style="width: 200px">Fecha de la última actividad ejecutada</th>
+          <th>Usuario responsable</th>
+          <th>Tiempo de evaluación</th>
+          <th style="width: 80px">Cancelar</th>
+        </tr>
+      </thead>
+
+      <!--ITERACION-->
+
+      <tbody>
+        <tr *ngFor="let resgistro of services">
+          <td>{{ resgistro.modelo }}</td>
+          <td>{{ resgistro.referencia }}</td>
+          <td>{{ resgistro.fecha_solicitud }}</td>
+          <td>{{ resgistro.etapa }}</td>
+          <td>{{ resgistro.fecha_ultima_actividad }}</td>
+          <td>{{ resgistro.usuario }}</td>
+          <td>{{ resgistro.tiempo_evaluacion }}</td>
+          <td>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              style="fill: rgba(0, 0, 0, 1)"
+            >
+              <path
+                d="M5 20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8h2V6h-4V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H3v2h2zM9 4h6v2H9zM8 8h9v12H7V8z"
+              ></path>
+              <path d="M9 10h2v8H9zm4 0h2v8h-2z"></path>
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

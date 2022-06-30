@@ -1,0 +1,40 @@
+<div class="modal">
+  <div class="retornar">
+    <h3>
+      Cerrar
+      <button
+        class="cerrar"
+        routerLink="/hostorial_vaciones"
+        routerLinkActive="active-link"
+      >
+        x
+      </button>
+    </h3>
+  </div>
+
+  <div class="fecha">
+    <table>
+      <thead class="table_head">
+        <tr>
+          <th>Fecha inicio del disfrute</th>
+          <th>Fecha fin del disfrute</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ registro.fecha_inicio }}</td>
+          <td>{{ registro.fecha_fin }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="container-button">
+      <button
+        class="boton"
+        routerLink="/hostorial_vaciones"
+        routerLinkActive="active-link"
+      >
+        Retornar
+      </button>
+    </div>
+  </div>
+</div>
