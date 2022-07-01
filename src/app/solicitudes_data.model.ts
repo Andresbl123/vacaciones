@@ -12,11 +12,13 @@ export interface SolicitudesVacaciones {
 }
 
 export interface Datum {
-  id: number;
+  id: string;
   modelo: string;
   referencia: string;
   fecha_solicitud: string;
   etapa: string;
+  dias_utilizados: number;
+  fecha_salida: number;
   fecha_ultima_actividad: string;
   usuario: string;
   tiempo_evaluacion: string;
@@ -190,11 +192,13 @@ const typeMap: any = {
   ),
   Datum: o(
     [
-      { json: 'id', js: 'id', typ: 0 },
+      { json: 'id', js: 'id', typ: '' },
       { json: 'modelo', js: 'modelo', typ: '' },
       { json: 'referencia', js: 'referencia', typ: '' },
       { json: 'fecha_solicitud', js: 'fecha_solicitud', typ: '' },
       { json: 'etapa', js: 'etapa', typ: '' },
+      { json: 'dias_utilizados', js: 'dias_utilizados', typ: 0 },
+      { json: 'fecha_salida', js: 'fecha_salida', typ: '' },
       { json: 'fecha_ultima_actividad', js: 'fecha_ultima_actividad', typ: '' },
       { json: 'usuario', js: 'usuario', typ: '' },
       { json: 'tiempo_evaluacion', js: 'tiempo_evaluacion', typ: '' },

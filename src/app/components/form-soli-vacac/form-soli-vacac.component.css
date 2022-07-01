@@ -1,3 +1,12 @@
+.retornar {
+  text-align: end;
+  right: 50px;
+  margin-top: -7%;
+}
+.cerrar {
+  border-radius: 100px;
+}
+
 .fomrulario {
   margin: auto;
   margin-top: 10%;

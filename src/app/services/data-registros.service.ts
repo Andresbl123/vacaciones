@@ -16,6 +16,5 @@ export class DataRegistrosService {
         console.log(response);
         this.data = response.Registros;
       });
-    //return this.http.get<Data[]>('https://fakestoreapi.com/products');
   }
 }

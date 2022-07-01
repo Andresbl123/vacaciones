@@ -10,7 +10,7 @@ import { ErrorConectionComponent } from './components/error-conection/error-cone
 
 const routes: Routes = [
   {
-    path: 'hostorial_vaciones',
+    path: 'historial_vaciones',
     component: HistorialVacacionesComponent,
     children: [
       {
@@ -28,14 +28,14 @@ const routes: Routes = [
     component: SolicVacaciComponent,
     children: [
       {
-        path: 'solicitar_vaciones',
+        path: 'solicitar_vacaciones',
         component: FormSoliVacacComponent,
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/hostorial_vaciones',
+    redirectTo: '/historial_vaciones',
     pathMatch: 'full',
   },
   {

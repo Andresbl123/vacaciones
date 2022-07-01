@@ -1,13 +1,43 @@
 <div class="modal">
   <form action="" class="fomrulario">
-    <label for="" class="labels">Días habiles a disfrutar</label><br />
-    <input type="text" placeholder="# 15" class="fecha" /><br />
+    <div class="retornar">
+      <h3>
+        Cerrar
+        <button
+          class="cerrar"
+          routerLink="/Solicitudes_en_tramite"
+          routerLinkActive="active-link"
+        >
+          x
+        </button>
+      </h3>
+    </div>
+    <label for="" class="labels">Días hábiles a disfrutar</label><br />
+    <input
+      required
+      #dias_solicitud="ngModel"
+      [(ngModel)]="dataSolicitud.dias_utilizados"
+      type="text"
+      placeholder="#15"
+      class="fecha"
+      name="dias_solicitud"
+    /><br />
     <label for="" class="labels">Fecha de salida</label><br />
-    <input type="date" class="fecha" /> <br />
+    <input
+      required
+      #fecha_salida="ngModel"
+      [(ngModel)]="dataSolicitud.fecha_salida"
+      name="fecha_salida"
+      type="date"
+      class="fecha"
+    />
+    <br />
     <label for="" class="labels">Observaciones</label> <br />
     <textarea type="text" maxlength="300" class="observaciones"></textarea>
   </form>
   <div class="enviar-info">
-    <button type="submit" class="solicitar">Solicitar></button>
+    <button (click)="mostrarInfo()" type="submit" class="solicitar">
+      Solicitar>
+    </button>
   </div>
 </div>
