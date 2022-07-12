@@ -7,20 +7,49 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
+/**
+ * class for the structure of the data consumed from the
+ */
 export interface Consulta {
+  /**
+   * variable of the data type that brings the consumed API
+   */
   Registros: Registro[];
 }
-
+/**
+ * Definition of the structure of the object consumed in the API
+ */
 export interface Registro {
+  /**
+   * id
+   */
   id: number;
+  /**
+   * name
+   */
   nombre: string;
+  /**
+   * date start
+   */
   fecha_inicio: string;
+  /**
+   * date end
+   */
   fecha_fin: string;
+  /**
+   * days enjoy
+   */
   dias_disfrutados: number;
+  /**
+   * form of urilization
+   */
   forma_utilizacion: string;
+  /**
+   * approval minutes
+   */
   acta_de_disfrute?: string;
 }
-
+/*
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
@@ -197,4 +226,4 @@ const typeMap: any = {
     ],
     false
   ),
-};
+};*/

@@ -21,7 +21,18 @@
       placeholder="#15"
       class="fecha"
       name="dias_solicitud"
-    /><br />
+    /><br /><br />
+    <label for="" class="labels">Modelo</label><br />
+    <select
+      name="Modelo"
+      [(ngModel)]="dataSolicitud.modelo"
+      style="max-width: 130%"
+    >
+      <option>Vacaciones</option>
+      <option>Pagos</option>
+    </select>
+    <br />
+    <br />
     <label for="" class="labels">Fecha de salida</label><br />
     <input
       required
@@ -31,12 +42,17 @@
       type="date"
       class="fecha"
     />
-    <br />
+    <br /><br />
     <label for="" class="labels">Observaciones</label> <br />
     <textarea type="text" maxlength="300" class="observaciones"></textarea>
   </form>
   <div class="enviar-info">
-    <button (click)="mostrarInfo()" type="submit" class="solicitar">
+    <button
+      (click)="addregister()"
+      routerLink="/Solicitudes_en_tramite"
+      type="submit"
+      class="solicitar"
+    >
       Solicitar>
     </button>
   </div>

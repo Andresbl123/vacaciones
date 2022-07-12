@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * Decorator that marks a class as available to be provided and injected as a dependency.
+ */
 @Injectable({
-  providedIn: 'root'
+  /**
+   * Decorator that marks a class as available to be provided and injected as a dependency.
+   */
+  providedIn: 'root',
 })
-export class SolicitudesTramisteService {
 
-  constructor() { }
+/**
+ * Service for pending requests
+ */
+export class SolicitudesTramisteService {
+  /**
+   * constructor
+   */
+  constructor() {}
 }

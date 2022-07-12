@@ -1,38 +1,53 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ServicesVacaciService } from '../../services-vacaci.service';
-import { ServicePDFService } from '../../services/service-pdf.service';
+import { Component, OnInit } from '@angular/core';
 import { DataRegistrosService } from '../../services/data-registros.service';
-import { Registro } from 'src/app/Data.model';
-import { FechaUtilizacionComponent } from '../fecha-utilizacion/fecha-utilizacion.component';
 
+/**
+ * Components vacation history
+ */
 @Component({
   selector: 'app-historial-vacaciones',
   templateUrl: './historial-vacaciones.component.html',
   styleUrls: ['./historial-vacaciones.component.css'],
 })
-export class HistorialVacacionesComponent implements OnInit {
-  modalSwitch: boolean = true;
-  modalSwitchPDF!: boolean;
-  // data: Data[] = [];
+/**
+ * Component for leave history
+ */
+export class HistorialVacacionesComponent {
+  // variable donde se almacena el index retornado de la función returIndex()
 
+  /**
+   * Variable to store the index returned by the function returIndex()
+   */
+  ind: number = 0;
+
+  /**
+   * constructor
+   * @param dataRegistro Instance to obtain consumed API data
+   */
   constructor(private dataRegistro: DataRegistrosService) {
     this.dataRegistro.getAllData();
   }
 
-  /*
-  @Input() registros: Data = {
-    id: 0,
-    nombre: '',
-    fecha_inicio: '',
-    fecha_fin: '',
-    dias_disfrutados: 0,
-    forma_utilizacion: '',
-    acta_de_disfrute: '',
-  };
-*/
-  ngOnInit(): void {}
+  /**
+   * ngOnInit
+   */
+  // ngOnInit(): void {}
 
+  //Data del json api
+  /**
+   * Return vacation history data
+   */
   get datas() {
     return this.dataRegistro.data;
+  }
+
+  // Funcion que retorna el index del html
+  /**
+   * Function that returns the html index
+   * @param index  index of the object to be validated
+   * @returns index where the index of the iterated object is stored in html
+   */
+  returIndex(index: number) {
+    return (this.ind = index);
   }
 }

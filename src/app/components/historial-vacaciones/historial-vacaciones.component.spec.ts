@@ -8,9 +8,8 @@ describe('HistorialVacacionesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistorialVacacionesComponent ]
-    })
-    .compileComponents();
+      declarations: [HistorialVacacionesComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

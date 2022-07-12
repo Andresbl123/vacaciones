@@ -1,15 +1,24 @@
-import { Component, Input } from '@angular/core';
-import { ServicesVacaciService } from './services-vacaci.service';
-import { Registro } from './Data.model';
-import { HistorialVacacionesComponent } from './components/historial-vacaciones/historial-vacaciones.component';
+import { Component } from '@angular/core';
 
+/**
+ * Components app.components
+ */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'vacaciones';
 
+/**
+ * main component
+ */
+export class AppComponent {
+  /**
+   * PROJECT NAME
+   */
+  title = 'vacaciones';
+  /**
+   * constructor
+   */
   constructor() {}
 }

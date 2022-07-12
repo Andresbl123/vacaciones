@@ -1,4 +1,5 @@
 <router-outlet></router-outlet>
+<!--Header-->
 <div class="title">
   <h1>Días pendientes por disfrutar:{{ 15 }}</h1>
 </div>
@@ -13,16 +14,24 @@
       </tr>
     </thead>
 
-    <!--ITERACION-->
+    <!--Tabla hisorial de vacaciones-->
     <tbody>
-      <tr *ngFor="let item of datas">
-        <td routerLink="fecha_utilizacion" routerLinkActive="active-link">
+      <tr *ngFor="let item of datas; let indexe = index">
+        <td
+          routerLink="fecha_utilizacion"
+          routerLinkActive="active-link"
+          (click)="returIndex(indexe)"
+        >
           {{ item.fecha_inicio }}
         </td>
 
-        <td>{{ item.dias_disfrutados }}</td>
+        <td>
+          {{ item.dias_disfrutados }}
+        </td>
 
-        <td>{{ item.forma_utilizacion }}</td>
+        <td>
+          {{ item.forma_utilizacion }}
+        </td>
 
         <td routerLink="acta_disfrute" routerLinkActive="active-link">
           <svg

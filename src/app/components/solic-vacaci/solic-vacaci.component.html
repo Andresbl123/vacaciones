@@ -17,7 +17,7 @@
           <th>Etapa</th>
           <th style="width: 200px">Fecha de la última actividad ejecutada</th>
           <th>Usuario responsable</th>
-          <th>Tiempo de evaluación</th>
+          <th>Dias a disfrutar</th>
           <th style="width: 80px">Cancelar</th>
         </tr>
       </thead>
@@ -25,7 +25,7 @@
       <!--ITERACION-->
 
       <tbody>
-        <tr *ngFor="let resgistro of services">
+        <tr *ngFor="let resgistro of services; let i = index">
           <td>{{ resgistro.modelo }}</td>
           <td>{{ resgistro.referencia }}</td>
           <td>{{ resgistro.fecha_solicitud }}</td>
@@ -33,7 +33,7 @@
           <td>{{ resgistro.fecha_ultima_actividad }}</td>
           <td>{{ resgistro.usuario }}</td>
           <td>{{ resgistro.tiempo_evaluacion }}</td>
-          <td>
+          <td (click)="deleteREgister(i)">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

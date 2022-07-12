@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FechaUtilizacionComponent } from './fecha-utilizacion.component';
+import { HistorialVacacionesComponent } from '../historial-vacaciones/historial-vacaciones.component';
 
-describe('FechaUtilizacionComponent', () => {
+fdescribe('fecha de utilizacion', () => {
   let component: FechaUtilizacionComponent;
   let fixture: ComponentFixture<FechaUtilizacionComponent>;
 
+  let nombre: string = 'Andres';
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FechaUtilizacionComponent ]
-    })
-    .compileComponents();
+      declarations: [FechaUtilizacionComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -18,8 +19,11 @@ describe('FechaUtilizacionComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('pruebas unitarias', () => {
+    //expect(HistorialVacaciones).toBeDefined();
+    expect(nombre).toEqual('Andres');
+  });
+  it('esta definido', () => {
+    expect(nombre).toBeDefined();
   });
 });

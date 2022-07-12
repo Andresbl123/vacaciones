@@ -1,39 +1,44 @@
-import { Component, OnInit, Injectable, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ServicesVacaciService } from 'src/app/services-vacaci.service';
-import { FormSoliVacacComponent } from '../form-soli-vacac/form-soli-vacac.component';
-import { SolicitudesVacaciones, Datum } from '../../solicitudes_data.model';
 
+/**
+ * Component to display vacation request data
+ */
 @Component({
   selector: 'app-solic-vacaci',
   templateUrl: './solic-vacaci.component.html',
   styleUrls: ['./solic-vacaci.component.css'],
 })
-export class SolicVacaciComponent implements OnInit {
-  constructor(
-    private dataSolicitudes: ServicesVacaciService,
-    private formSoliDias: FormSoliVacacComponent
-  ) {
+
+/**
+ * component to display vacation request data
+ */
+export class SolicVacaciComponent /*implements OnInit*/ {
+  /**
+   *
+   * @param dataSolicitudes instance vacation service -> the vacation service the function that connects to the api and fetches the data from it
+   */
+  constructor(private dataSolicitudes: ServicesVacaciService) {
     this.dataSolicitudes.getAllSolicitudes();
-    this.formSoliDias.generateID();
   }
 
-  ngOnInit(): void {}
+  //ngOnInit(): void {}
 
-  newDataSolici: SolicitudesVacaciones[] = [];
-  @Input() dataSolicitud: Datum = {
-    id: this.formSoliDias.generateID(),
-    modelo: '',
-    referencia: this.formSoliDias.generateID(),
-    fecha_solicitud: '',
-    etapa: '',
-    dias_utilizados: 0,
-    fecha_salida: 0,
-    fecha_ultima_actividad: '',
-    usuario: '',
-    tiempo_evaluacion: '',
-  };
+  // Retorna la data de solicitudes de vaciciones
 
+  /**
+   * Returns the data of emptying requests
+   */
   get services() {
     return this.dataSolicitudes.solicitudes;
+  }
+
+  //Funcion que elimina un elemento de la solicitud de vacaciones
+  /**
+   * removes an item from the vacation request
+   * @param index index of the object to be deleted
+   */
+  deleteREgister(index: number) {
+    this.services.splice(index, 1);
   }
 }
